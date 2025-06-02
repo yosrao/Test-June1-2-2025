@@ -1,33 +1,22 @@
-// The Dev Container format allows you to configure your environment. At the heart of it
-// is a Docker image or Dockerfile which controls the tools available in your environment.
-//
-// See https://aka.ms/devcontainer.json for more information.
 {
-	"name": "Gitpod",
-	// Use "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
-	// instead of the build to use a pre-built image.
-	"build": {
-        "context": ".",
-        "dockerfile": "Dockerfile"
-    }
-}
-{
-    "name": "PHP 8.2 Dev Container",
-  "image": "php:8.2-cli",
+  "name": "PHP 8.2 Dev Container",
+  "image": "gitpod/workspace-full",
   "customizations": {
     "vscode": {
+      "settings": {
+        "php.validate.executablePath": "/usr/bin/php8.2",
+       //"editor.defaultFormatter": "vscode.php-formatter"
+      },
       "extensions": [
-        "felixfbecker.php-debug",  // PHP Debug extension
-        "bm-d.php-symfony-vscode-extensions"  // Symfony VS Code extension
+        "felixfbecker.php-debug",
+       // "vscode.php-formatter",
+       // "streetsidesoftware.code-spell-checker"
       ]
     }
-  }
+  },
+  "forwardPorts": [
+    8000,
+    8080
+  ],
+  "postCreateCommand": "composer install"
 }
-	// Features add additional features to your environment. See https://containers.dev/features
-	// Beware: features are not supported on all platforms and may have unintended side-effects.
-	// "features": {
-    //   "ghcr.io/devcontainers/features/docker-in-docker": {
-    //     "moby": false
-    //   }
-    // }
-
