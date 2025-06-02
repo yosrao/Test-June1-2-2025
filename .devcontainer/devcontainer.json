@@ -4,7 +4,7 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "php.validate.executablePath": "/usr/bin/php8.2"
+        "php.validate.executablePath": "/Applications/MAMP/bin/php/php8.2.26/bin"
        //"editor.defaultFormatter": "vscode.php-formatter"
       },
       "extensions": [
