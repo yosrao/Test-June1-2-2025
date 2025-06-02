@@ -4,11 +4,11 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "php.validate.executablePath": "/usr/bin/php8.2",
+        "php.validate.executablePath": "/usr/bin/php8.2"
        //"editor.defaultFormatter": "vscode.php-formatter"
       },
       "extensions": [
-        "felixfbecker.php-debug",
+        "felixfbecker.php-debug"
        // "vscode.php-formatter",
        // "streetsidesoftware.code-spell-checker"
       ]
