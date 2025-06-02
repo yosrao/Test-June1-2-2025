@@ -1,4 +1,8 @@
 image:
   file: .devcontainer/Dockerfile
 
-  
+  ports:
+  - name: "My App"
+    port: 8080
+    onOpen: "open-browser" # or "open-preview", "notify", "ignore"
+    description: "The main application web server"
